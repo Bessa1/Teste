@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+/*08) Escreva um programa que irá simular uma simples calculadora. Ele deverá utilizar os conceitos de
+orientação a objetos. Para isto deverá atender os seguintes requisitos:
+
+1. Possuir uma classe chamada Calculadora.
+2. A classe deverá possuir um construtor.
+3. A classe deverá possuir atributos privados.
+4. Possuir as seguintes operações (métodos):
+a. Somar dois números inteiro positivos.
+b. Multiplicar dois números sendo que o primeiro pode ser negativo e o segundo
+somente positivo.
+
+c. Calcular o valor de desconto de um determinado valor. Por exemplo deverá ser
+passar para o programa o valor: 100 e a taxa de desconto de 20% e ele deverá
+retorna o valor com desconto.*/
+ 
+   class Calculadora{ 
+   #valor1 
+   #valor2 
+   constructor(valor1,valor2){
+        this.#valor1 = valor1
+        this.#valor2 = valor2
+
+    }
+        soma = () => {
+                return this.#valor1 + this.#valor2
+    }
+        multi = () => {
+            if(this.#valor2 < 0 ){
+                return "Segundo valor inválido!";  
+
+                }else{
+
+                return this.#valor1 * this.#valor2
+            } 
+        }    
+        desconto = () => {
+               var resultado = this.#valor2 /100
+               var desconto = resultado * this.#valor1
+               return this.#valor1 - desconto
+    }
+   }
+
+   var valor1 = parseInt(prompt("Digite o valor 1:"));
+   var valor2 = parseInt(prompt("Digite o valor 2:"));
+   var c1 = new Calculadora(valor1,valor2)
+   var opcao = parseInt(prompt("Digite a opção desejada: 1) para soma 2) para multiplicação 3) para desconto"));
+
+   function calculadora(){
+   switch(
+    
+    opcao
+   ){
+    case 1: 
+    alert(c1.soma())
+    opcao = parseInt(prompt("Digite a opção desejada: 1) para soma 2) para multiplicação 3) para desconto 4) para sair")); 
+    calculadora()
+    break;
+    case 2:
+    alert(c1.multi())  
+    opcao = parseInt(prompt("Digite a opção desejada: 1) para soma 2) para multiplicação 3) para desconto 4) para sair"));   
+    calculadora()
+    break;
+    case 3: 
+    alert(c1.desconto()) 
+    opcao = parseInt(prompt("Digite a opção desejada: 1) para soma 2) para multiplicação 3) para desconto 4) para sair"));
+    calculadora()
+    break;
+    case 4:
+    return
+    break;
+    default:
+    alert("Opção inválida"); 
+    opcao = parseInt(prompt("Digite a opção desejada: 1) para soma 2) para multiplicação 3) para desconto 4) para sair"));
+    calculadora()
+    break;
+    
+   }
+}
+
+    calculadora()
+  
+
+
+
+       
+</script>
+</body>
+</html>

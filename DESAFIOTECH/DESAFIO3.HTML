@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+/* 3) Escreva um algoritmo para ler o salário mensal atual de um funcionário e o percentual de
+reajuste. Calcular e escrever o valor do novo salário.*/
+
+       var salario = Number(prompt("Digite o valor do salário:"));
+       var reajuste = Number(prompt("Digite o valor do reajuste:"));
+       var reajusteFinal = reajuste/100;
+       var adicional = reajusteFinal * salario ;
+       var novoSalario = adicional + salario;     
+
+       alert("O atual salário do funcionário é de : R$" + salario);
+       alert("O funcionário irá receber um reajuste de: " + reajuste + "%");
+       alert("Então o funcionário receberá um adicional de: R$" + adicional );
+       alert("Por fim, o funcionário passará a receber um novo salário de: R$" + novoSalario);
+
+       
+</script>
+</body>
+</html>
